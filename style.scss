@@ -1,0 +1,1180 @@
+	/* css normalize */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}body{margin:0;}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}audio,canvas,progress,video{display:inline-block;vertical-align:baseline;}audio:not([controls]){display:none;height:0;}[hidden],template{display:none;}a{background:transparent;}a:active,a:hover{outline:0;}abbr[title]{border-bottom:1px dotted;}dfn{font-style:italic;}h1{font-size:2em;margin:.67em 0;}mark{background:#ff0;color:#000;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}figure{margin:1em 40px;}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em;}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0;}button{overflow:visible;}button,select{text-transform:none;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],html input[disabled]{cursor:default;}input{line-height:normal;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}table{border-collapse:collapse;border-spacing:0;}td,th{padding:0;}b,strong,optgroup{font-weight:700;}pre,textarea{overflow:auto;}button::-moz-focus-inner,input::-moz-focus-inner,legend{border:0;padding:0;}
+
+    /* clearfix */
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+    /* border box */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+/*==================================================*/
+
+$lightblue: #a3e8e7;
+$medblue: #3ae0e5;
+$darkblue: #3aadb4;
+$green: #76da3a;
+$darkgreen: #acc539;
+$yellow: #fef035;
+$darkyellow: #fedc38;
+
+.lightblue {
+	color: $lightblue;
+}
+.medblue {
+	color: $medblue;
+}
+.darkblue {
+	color: $darkblue;
+}
+.green{
+	color: $green;
+}
+.darkgreen {
+	color: $darkgreen;
+}
+.yellow {
+	color: $yellow;
+}
+.darkyellow {
+	color: $darkyellow;
+}
+.percent {
+	color: black;
+	margin-left: 10px;
+}
+@mixin fontFamily {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 200;
+}
+
+html {
+	@include fontFamily;
+}
+
+body {
+	color: black;
+	@include fontFamily;
+}
+
+img {
+	max-width: 100%;
+}
+.wrapper {
+	width: 100%;
+	margin: 0;
+	background: white url("images/home-mainbg.jpg") no-repeat 290px top;
+}
+.content {
+	width: 100%;
+	margin: 0;
+}
+.header {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.heather_logo img {
+	width: 315px;
+	margin-top: 100px;
+	margin-left: 20px;
+
+}
+.nav ul {
+	width: 25%;
+	display: block;
+	@include fontFamily;
+	font-size: 44px;
+	list-style-type: none;
+	padding: 0;
+	margin-top: 20px;
+	margin-left: -40px;
+	transition: all 3s;
+}
+	.nav li a {
+		padding-left: 40px;
+		text-decoration: none;
+		color: black;
+		margin-left: 45px;
+	}
+	.nav li:hover a {
+		background: url("images/icon-nav-active.png") no-repeat left;
+	}
+.triangle {
+	width: 375px;
+	float: right;
+	position: absolute;
+	display: block;
+	top: 305px;
+	right: 0;
+	opacity: 0.8;
+	transition: all 0.15s linear;
+}
+.triangle:hover {
+	top: 345px;
+	opacity: 1;
+}	
+.short_bio {
+	width: 436px;
+	@include fontFamily;
+	font-size: 1.35rem;
+	padding: 0;
+	margin: 0 45px;
+}
+	.short_bio p {
+		width: 436px;
+		@include fontFamily;
+		font-size: 1rem;
+		padding: 0;
+		line-height: 1.75rem;
+	}
+	.short_bio a {
+		color: $darkblue;
+		text-decoration: none;
+	}
+	.short_bio a:hover {
+		text-decoration: underline;
+	}
+
+.learnmore_button {
+	width: 250px;
+	margin-left: 45px;
+	margin-bottom: 85px;
+}
+	#parallelogram {
+	background: url("images/bg-links.png") no-repeat right;
+	width: 205px;
+	height: 36px;
+	color: #fedc38;
+	font-size: 0.95rem;
+	padding-left: 10px;
+	padding-top: 8px;
+	transition: all 0.25s;
+	}
+	#parallelogram a {
+		color: #fedc38;
+		text-decoration: none;
+		transition: all 0.25s;
+	}
+	#parallelogram:hover {
+		width: 220px;
+	}
+	#parallelogram:hover a {
+		width: 205px;
+		padding-left: 15px;
+		color: $darkgreen;
+	}
+
+.heading {
+	font-size: 1.5rem;
+	padding-bottom: 20px;
+}
+.life_chart {
+	width: 100%;
+	background: white url("images/bg-stripe.png") repeat;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+	.life_pie img {
+		width: 325px;
+		float: left;
+		margin-top: -50px;
+		margin-left: 15px;
+	}
+	.life_chart_c1 {
+		width: 33%;
+		margin: 0;
+		float: left;
+		padding-top: 30px;
+		padding-left: 30px;
+		padding-right: 0;
+	}
+		.life_chart_c1 ul {
+			list-style-type: none;
+			padding: 0;
+			float: left;
+		}
+		.life_chart_c1 li {
+			font-size: 1rem;
+			float: left;
+			padding: 0;
+		
+		}
+		.life_chart_c1 li span {
+			font-size: 1.75rem;
+			float: left;
+			padding: 0;
+		}
+		.life_chart_c1 p {
+			font-size: 1rem;
+			padding: 10px;
+			margin: 0;
+			float: left;
+			width: 250px;
+		}
+		
+	.life_chart_c2 {
+		width: 35%;
+		margin: 0;
+		float: left;
+		padding-top: 79px;
+	}
+		.life_chart_c2 ul {
+			list-style-type: none;
+			padding: 0;
+			float: left;
+		}
+		.life_chart_c2 li {
+			font-size: 1rem;
+			float: left;
+			padding: 0;
+		
+		}
+		.life_chart_c2 li span {
+			font-size: 1.75rem;
+			float: left;
+			padding: 0;
+		}
+		.life_chart_c2 p {
+			font-size: 1rem;
+			padding: 10px;
+			margin: 0;
+			float: left;
+			width: 285px;
+		}
+
+.footer {
+	width: 100%;
+	margin: 0;
+	background: #ccc url("images/bg-footer.png") repeat center;	
+	clear: both;
+	position: relative;
+}
+.footer_map {
+	width: 100%;
+	height: 300px;
+	margin: 0;
+	background: url("images/footer-map.png") no-repeat right top;	
+}
+	.footer_content {
+	width: 100%;
+	margin: 0;
+	padding-top: 20px;
+	padding-left: 45px;
+	}
+
+	.footer_twitter {
+		width: 40%;
+		margin: 0;
+		float: left;
+	}
+		.footer_twitter a {
+			@include fontFamily;
+			font-size: 1rem;
+			color: white;
+			margin: 0px;
+			display: block;
+			padding: 3px;
+			text-decoration: none;
+		}
+		a.twitter {
+			background: url("images/icon-footer-twitter-40x45.png") no-repeat 0 0;
+			width: 40px;
+			height: 45px;
+			display: block;
+			text-indent: -9999px;
+			float: left;
+			margin-right: 20px;
+		}
+			a.twitter:hover {
+				background-position: 0 -45px;
+			}
+
+	.footer_email {
+		width: 40%;
+		margin-top: 15px;
+		float: left;
+		clear: both;
+	}
+		.footer_email a {
+			@include fontFamily;
+			font-size: 1rem;
+			color: white;
+			margin: 0;
+			display: block;
+			padding: 3px;
+			text-decoration: none;
+		}
+		a.email {
+			background: url("images/icon-footer-email-40x45.png") no-repeat 0 0;
+			width: 40px;
+			height: 45px;
+			display: block;
+			text-indent: -9999px;
+			float: left;
+			clear: both;
+			margin-right: 20px;
+		}
+			a.email:hover {
+				background-position: 0 -45px;
+			}
+	.credit {
+		width: 30%;
+		margin: 0;
+		padding-top: 20px;
+		clear: both;		
+	}
+		.credit p {
+			@include fontFamily;
+			font-size: 0.75rem;
+			color: white;
+			margin: 0;
+			padding-top: 3px;
+			letter-spacing: 0.25px;
+		}
+	.bubble {
+		width: 400px;
+		height: 105px;
+		background: url("images/footer-ribbon-full.png") no-repeat center;
+		padding: 10px;
+		margin: 0;
+		color: white;
+		position: absolute;
+		top: -30px;
+		right: 20px;
+	}
+		.bubble img {
+			border-radius: 50%;
+			float: left;
+			margin-left: 10px;
+			margin-top: 2.5px;
+		}
+		.bubble p {
+			width: 250px;
+			@include fontFamily;
+			font-size: 0.80rem;
+			float: left;
+			line-height: 20px;
+			margin-top: 5px;
+			margin-left: 20px;
+		}
+		.bubble a {
+			color: $darkyellow;
+			text-decoration: none;
+		}
+
+/*/////////////////////////////////////////////////////////////
+			              RESPONSIVE
+////////////////////////////////////////////////////////////*/
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.wrapper {
+		background: white url("images/home-mainbg.jpg") no-repeat top right;
+		background-size: 75%;
+		
+	}
+	.header {
+		width: 100%;
+	}
+	.heather_logo img {
+		width: 315px;
+	}
+	.triangle {
+		width: 275px;
+		float: right;
+		position: absolute;
+		display: block;
+		top: 230px;
+		right: 0;
+		opacity: 0.8;
+		transition: all 0.15s linear;
+	}
+	.triangle:hover {
+		top: 260px;
+		opacity: 1;
+	}	
+	.short_bio {
+		width: 436px;
+		@include fontFamily;
+		font-size: 1.35rem;
+		padding: 0;
+		margin: 0 45px;
+	}
+		.short_bio p {
+			width: 436px;
+			@include fontFamily;
+			font-size: 1rem;
+			padding: 0;
+			line-height: 1.75rem;
+		}
+		.short_bio a {
+			color: $darkblue;
+			text-decoration: none;
+		}
+		.short_bio a:hover {
+			text-decoration: underline;
+		}
+	.learnmore_button {
+		width: 250px;
+		margin-left: 30px;
+		margin-bottom: 85px;
+	}
+		#parallelogram {
+		background: url("images/bg-links.png") no-repeat right;
+		width: 205px;
+		height: 36px;
+		color: #fedc38;
+		font-size: 0.95rem;
+		padding-left: 10px;
+		padding-top: 8px;
+		transition: all 0.25s;
+		}
+		#parallelogram a {
+			color: #fedc38;
+			text-decoration: none;
+			transition: all 0.25s;
+		}
+		#parallelogram:hover {
+			width: 220px;
+		}
+		#parallelogram:hover a {
+			width: 205px;
+			padding-left: 15px;
+			color: $darkgreen;
+		}
+	
+	.life_chart {
+		width: 100%;
+		background: white url("images/bg-stripe.png") repeat;
+		margin: 0 auto;
+		padding-bottom: 50px;
+	}
+		.life_pie img {
+			width: 300px;
+			float: left;
+			margin-top: -50px;
+			margin-left: 15px;
+		}
+		.life_chart_c1 {
+			width: 35.5%;
+			margin: 0;
+			float: left;
+			padding-top: 30px;
+			padding-right: 0;
+		}
+			.life_chart_c1 ul {
+				list-style-type: none;
+				padding: 0;
+				float: left;
+			}
+			.life_chart_c1 li {
+				font-size: 1rem;
+				float: left;
+				padding: 0;
+			
+			}
+			.life_chart_c1 li span {
+				font-size: 1.5rem;
+				float: left;
+				padding: 0;
+			}
+			.life_chart_c1 p {
+				font-size: 0.85rem;
+				padding: 10px;
+				margin: 0;
+				float: left;
+				width: 185px;
+			}
+			
+		.life_chart_c2 {
+			width: 30%;
+			margin: 0;
+			float: left;
+			padding-top: 79px;
+		}
+			.life_chart_c2 ul {
+				list-style-type: none;
+				padding: 0;
+				float: left;
+			}
+			.life_chart_c2 li {
+				font-size: 1rem;
+				float: left;
+				padding: 0;
+			
+			}
+			.life_chart_c2 li span {
+				font-size: 1.5rem;
+				float: left;
+				padding: 0;
+			}
+			.life_chart_c2 p {
+				font-size: 0.85rem;
+				padding: 10px;
+				margin: 0;
+				float: left;
+				width: 195px;
+			}
+
+	.footer {
+		width: 100%;
+		margin: 0;
+		background: #ccc url("images/bg-footer.png") repeat center;	
+		clear: both;
+		position: relative;
+	}
+	.footer_map {
+		width: 100%;
+		height: 300px;
+		margin: 0;
+		background: url("images/footer-map.png") no-repeat right top;	
+	}
+		.footer_content {
+		width: 100%;
+		margin: 0;
+		padding-top: 20px;
+		padding-left: 45px;
+		}
+
+		.footer_twitter {
+			width: 40%;
+			margin: 0;
+			float: left;
+		}
+			.footer_twitter a {
+				@include fontFamily;
+				font-size: 1rem;
+				color: white;
+				margin: 0px;
+				display: block;
+				padding: 3px;
+				text-decoration: none;
+			}
+			a.twitter {
+				background: url("images/icon-footer-twitter-40x45.png") no-repeat 0 0;
+				width: 40px;
+				height: 45px;
+				display: block;
+				text-indent: -9999px;
+				float: left;
+				margin-right: 20px;
+			}
+				a.twitter:hover {
+					background-position: 0 -45px;
+				}
+
+		.footer_email {
+			width: 40%;
+			margin-top: 15px;
+			float: left;
+			clear: both;
+		}
+			.footer_email a {
+				@include fontFamily;
+				font-size: 1rem;
+				color: white;
+				margin: 0;
+				display: block;
+				padding: 3px;
+				text-decoration: none;
+			}
+			a.email {
+				background: url("images/icon-footer-email-40x45.png") no-repeat 0 0;
+				width: 40px;
+				height: 45px;
+				display: block;
+				text-indent: -9999px;
+				float: left;
+				clear: both;
+				margin-right: 20px;
+			}
+				a.email:hover {
+					background-position: 0 -45px;
+				}
+		.credit {
+			width: 30%;
+			margin: 0;
+			padding-top: 20px;
+			clear: both;		
+		}
+			.credit p {
+				@include fontFamily;
+				font-size: 0.75rem;
+				color: white;
+				margin: 0;
+				padding-top: 3px;
+				letter-spacing: 0.25px;
+			}
+		.bubble {
+			width: 400px;
+			height: 105px;
+			background: url("images/footer-ribbon-full.png") no-repeat center;
+			padding: 10px;
+			margin: 0;
+			color: white;
+			position: absolute;
+			top: -30px;
+			right: 20px;
+		}
+			.bubble img {
+				border-radius: 50%;
+				float: left;
+				margin-left: 10px;
+				margin-top: 2.5px;
+			}
+			.bubble p {
+				width: 250px;
+				@include fontFamily;
+				font-size: 0.80rem;
+				float: left;
+				line-height: 20px;
+				margin-top: 5px;
+				margin-left: 20px;
+			}
+			.bubble a {
+				color: $darkyellow;
+				text-decoration: none;
+			}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.wrapper {
+		background: white url("images/home-mainbg.jpg") no-repeat top right;
+		background-size: 80%;
+		
+	}
+	.header {
+		width: 100%;
+	}
+	.heather_logo img {
+		width: 315px;
+	}
+	.nav ul {
+	width: 25%;
+	display: block;
+	@include fontFamily;
+	font-size: 44px;
+	list-style-type: none;
+	padding: 0;
+	margin-left: -30px;
+	transition: all 3s;
+}
+	.nav li a {
+		padding-left: 30px;
+		text-decoration: none;
+		color: black;
+		margin-left: 40px;
+	}
+	.nav li:hover a {
+		background: url("images/icon-nav-active.png") no-repeat left;
+	}
+	.triangle {
+		width: 250px;
+		float: right;
+		position: absolute;
+		display: block;
+		top: 180px;
+		right: 0;
+		opacity: 0.8;
+		transition: all 0.15s linear;
+	}
+	.triangle:hover {
+		top: 210px;
+		opacity: 1;
+	}	
+	.short_bio {
+		width: 436px;
+		@include fontFamily;
+		font-size: 1.35rem;
+		padding: 0;
+		margin: 0 30px;
+	}
+		.short_bio p {
+			width: 436px;
+			@include fontFamily;
+			font-size: 1rem;
+			padding: 0;
+			line-height: 1.75rem;
+		}
+		.short_bio a {
+			color: $darkblue;
+			text-decoration: none;
+		}
+		.short_bio a:hover {
+			text-decoration: underline;
+		}
+	.heading {
+	font-size: 1.25rem;
+	padding-bottom: 20px;
+	}	
+	.life_chart {
+		width: 100%;
+		background: white url("images/bg-stripe.png") repeat;
+		margin: 0 auto;
+		padding-bottom: 50px;
+	}
+		.life_pie img {
+			width: 230px;
+			float: left;
+			margin-top: -40px;
+			margin-left: 20px;
+		}
+		.life_chart_c1 {
+			width: 32%;
+			margin: 0;
+			float: left;
+			padding: 30px;
+			padding-right: 0;
+		}
+			.life_chart_c1 ul {
+				list-style-type: none;
+				padding: 0;
+			}
+			.life_chart_c1 li {
+				font-size: 1rem;
+				padding: 0;
+			
+			}
+			.life_chart_c1 li span {
+				font-size: 2rem;
+				padding: 0;
+			}
+			.life_chart_c1 p {
+				font-size: 1rem;
+				padding: 2px;
+				margin: 0;
+				width: 185px;
+			}
+			
+		.life_chart_c2 {
+			width: 34%;
+			margin: 0;
+			float: left;
+			padding-top: 74px;
+		}
+			.life_chart_c2 ul {
+				list-style-type: none;
+				padding: 0;
+			}
+			.life_chart_c2 li {
+				font-size: 1rem;
+				padding: 0;
+			
+			}
+			.life_chart_c2 li span {
+				font-size: 2rem;
+				padding: 0;
+			}
+			.life_chart_c2 p {
+				font-size: 1rem;
+				padding: 2px;
+				margin: 0;
+				width: 195px;
+			}
+
+	.footer {
+		width: 100%;
+		margin: 0;
+		background: #ccc url("images/bg-footer.png") repeat center;	
+		clear: both;
+		position: relative;
+	}
+	.footer_map {
+		width: 100%;
+		height: 300px;
+		margin: 0;
+		background: url("images/footer-map.png") no-repeat right top;	
+	}
+		.footer_content {
+		width: 100%;
+		margin: 0;
+		padding-top: 20px;
+		padding-left: 30px;
+		}
+
+		.footer_twitter {
+			width: 40%;
+			margin: 0;
+			float: left;
+		}
+			.footer_twitter a {
+				@include fontFamily;
+				font-size: 1rem;
+				color: white;
+				margin: 0px;
+				display: block;
+				padding: 3px;
+				text-decoration: none;
+			}
+			a.twitter {
+				background: url("images/icon-footer-twitter-40x45.png") no-repeat 0 0;
+				width: 40px;
+				height: 45px;
+				display: block;
+				text-indent: -9999px;
+				float: left;
+				margin-right: 20px;
+			}
+				a.twitter:hover {
+					background-position: 0 -45px;
+				}
+
+		.footer_email {
+			width: 40%;
+			margin-top: 15px;
+			float: left;
+			clear: both;
+		}
+			.footer_email a {
+				@include fontFamily;
+				font-size: 1rem;
+				color: white;
+				margin: 0;
+				display: block;
+				padding: 3px;
+				text-decoration: none;
+			}
+			a.email {
+				background: url("images/icon-footer-email-40x45.png") no-repeat 0 0;
+				width: 40px;
+				height: 45px;
+				display: block;
+				text-indent: -9999px;
+				float: left;
+				clear: both;
+				margin-right: 20px;
+			}
+				a.email:hover {
+					background-position: 0 -45px;
+				}
+		.credit {
+			width: 30%;
+			margin: 0;
+			padding-top: 20px;
+			clear: both;		
+		}
+			.credit p {
+				@include fontFamily;
+				font-size: 0.75rem;
+				color: white;
+				margin: 0;
+				padding-top: 3px;
+				letter-spacing: 0.25px;
+			}
+		.bubble {
+			width: 400px;
+			height: 105px;
+			background: url("images/footer-ribbon-full.png") no-repeat center;
+			padding: 10px;
+			margin: 0;
+			color: white;
+			position: absolute;
+			top: -30px;
+			right: 20px;
+		}
+			.bubble img {
+				border-radius: 50%;
+				float: left;
+				margin-left: 10px;
+				margin-top: 2.5px;
+			}
+			.bubble p {
+				width: 250px;
+				@include fontFamily;
+				font-size: 0.80rem;
+				float: left;
+				line-height: 20px;
+				margin-top: 5px;
+				margin-left: 20px;
+			}
+			.bubble a {
+				color: $darkyellow;
+				text-decoration: none;
+			}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.wrapper {
+		background: white url("images/home-mainbg.jpg") no-repeat top right;
+		background-size: 90%;
+	}
+	.header {
+		width: 100%;
+	}
+	.heather_logo img {
+		width: 250px;
+		margin-top: 160px;
+		
+	}
+		.nav ul {
+		width: 25%;
+		display: block;
+		@include fontFamily;
+		font-size: 44px;
+		list-style-type: none;
+		padding: 0;
+		margin-left: -30px;
+		transition: all 3s;
+	}
+		.nav li a {
+			padding-left: 30px;
+			text-decoration: none;
+			color: black;
+			margin-left: 40px;
+		}
+		.nav li:hover a {
+			background: url("images/icon-nav-active.png") no-repeat left;
+		}
+	.triangle {
+		width: 190px;
+		float: right;
+		position: absolute;
+		display: block;
+		top: 130px;
+		right: 0;
+		opacity: 0.8;
+		transition: all 0.15s linear;
+	}
+	.triangle:hover {
+		top: 150px;
+		opacity: 1;
+	}	
+	.short_bio {
+		width: 400px;
+		@include fontFamily;
+		font-size: 1.35rem;
+		padding: 0;
+		margin: 0 30px;
+	}
+		.short_bio p {
+			width: 400px;
+			@include fontFamily;
+			font-size: 1rem;
+			padding: 0;
+			line-height: 1.75rem;
+		}
+		.short_bio a {
+			color: $darkblue;
+			text-decoration: none;
+		}
+		.short_bio a:hover {
+			text-decoration: underline;
+		}
+	.heading {
+	font-size: 2rem;
+	padding-bottom: 20px;
+	}	
+	.life_chart {
+		width: 100%;
+		background: white url("images/bg-stripe.png") repeat;
+		margin: 0 auto;
+	}
+		.life_pie img {
+			width: 80%;
+			margin-top: -40px;
+			margin-left: 45px;
+		}
+		.life_chart_c1 {
+			width: 100%;
+			margin: 0;
+			padding-left: 30px;
+			padding-bottom: 0;
+		}
+			.life_chart_c1 ul {
+				list-style-type: none;
+				padding: 0;
+			}
+			.life_chart_c1 li {
+				font-size: 1rem;
+				padding: 0;
+				width: 100%;
+			
+			}
+			.life_chart_c1 li span {
+				font-size: 2.5rem;
+				padding: 0;
+			}
+			.life_chart_c1 p {
+				font-size: 1.35rem;
+				padding-top: 5px;
+				padding-left: 20px;
+				padding-bottom: 20px;
+				margin: 0;
+				width: 60%;
+			}
+			
+		.life_chart_c2 {
+			width: 100%;
+			margin-top: -30px;
+			padding-left: 30px;
+			padding-top: 0;
+		}
+			.life_chart_c2 ul {
+				list-style-type: none;
+				padding: 0;
+			}
+			.life_chart_c2 li {
+				font-size: 1rem;
+				padding: 0;
+				width: 100%;
+			}
+			.life_chart_c2 li span {
+				font-size: 2.5rem;
+				padding: 0;
+			}
+			.life_chart_c2 p {
+				font-size: 1.35rem;
+				padding-top: 5px;
+				padding-left: 20px;
+				padding-bottom: 20px;
+				margin: 0;
+				width: 60%;
+			}
+
+	.footer {
+		width: 100%;
+		margin: 0;
+		background: #ccc url("images/bg-footer.png") repeat center;	
+		clear: both;
+		position: relative;
+	}
+	.footer_map {
+		width: 100%;
+		height: 330px;
+		margin: 0;
+		background: url("images/footer-map.png") no-repeat -568px top;	
+	}
+		.footer_content {
+		width: 100%;
+		margin: 0;
+		padding-top: 20px;
+		padding-left: 30px;
+		}
+
+		.footer_twitter {
+			width: 70%;
+			margin-top: 90px;
+			float: left;
+		}
+			.footer_twitter a {
+				@include fontFamily;
+				font-size: 1rem;
+				color: white;
+				margin: 0px;
+				display: block;
+				padding: 3px;
+				text-decoration: none;
+			}
+			a.twitter {
+				background: url("images/icon-footer-twitter-40x45.png") no-repeat 0 0;
+				width: 40px;
+				height: 45px;
+				display: block;
+				text-indent: -9999px;
+				float: left;
+				margin-right: 20px;
+			}
+				a.twitter:hover {
+					background-position: 0 -45px;
+				}
+
+		.footer_email {
+			width: 70%;
+			margin-top: 15px;
+			float: left;
+			clear: both;
+		}
+			.footer_email a {
+				@include fontFamily;
+				font-size: 1rem;
+				color: white;
+				margin: 0;
+				display: block;
+				padding: 3px;
+				text-decoration: none;
+			}
+			a.email {
+				background: url("images/icon-footer-email-40x45.png") no-repeat 0 0;
+				width: 40px;
+				height: 45px;
+				display: block;
+				text-indent: -9999px;
+				float: left;
+				clear: both;
+				margin-right: 20px;
+			}
+				a.email:hover {
+					background-position: 0 -45px;
+				}
+		.credit {
+			width: 30%;
+			margin: 0;
+			padding-top: 20px;
+			clear: both;		
+		}
+			.credit p {
+				@include fontFamily;
+				font-size: 0.75rem;
+				color: white;
+				margin: 0;
+				padding-top: 3px;
+				letter-spacing: 0.25px;
+			}
+		.bubble {
+			width: 400px;
+			height: 105px;
+			background: url("images/footer-ribbon-full.png") no-repeat center;
+			background-size: 85%;
+			padding: 10px;
+			margin: 0;
+			color: white;
+			position: absolute;
+			top: -30px;
+			right: 10px;
+		}
+			.bubble img {
+				border-radius: 50%;
+				float: left;
+				margin-left: 32px;
+				margin-top: 3px;
+			}
+			.bubble p {
+				width: 250px;
+				@include fontFamily;
+				font-size: 0.75rem;
+				float: left;
+				line-height: 18px;
+				margin-top: 9px;
+				margin-left: 10px;
+			}
+			.bubble a {
+				color: $darkyellow;
+				text-decoration: none;
+			}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
