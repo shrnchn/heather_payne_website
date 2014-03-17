@@ -216,11 +216,6 @@ button::-moz-focus-inner, input::-moz-focus-inner, legend {
   color: #fedc38;
 }
 
-.percent {
-  color: black;
-  margin-left: 10px;
-}
-
 html {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 200;
@@ -239,7 +234,8 @@ img {
 .wrapper {
   width: 100%;
   margin: 0;
-  background: white url("images/home-mainbg.jpg") no-repeat 290px top;
+  background: white url("images/home-mainbg.jpg") no-repeat right top;
+  background-size: 80%;
 }
 
 .content {
@@ -269,7 +265,6 @@ img {
   padding: 0;
   margin-top: 20px;
   margin-left: -40px;
-  transition: all 3s;
 }
 
 .nav li a {
@@ -364,6 +359,16 @@ img {
   padding-bottom: 20px;
 }
 
+.stats {
+  width: 1000px;
+  background: red;
+}
+
+.stats li {
+  width: 50%;
+  float: left;
+}
+
 .life_chart {
   width: 100%;
   background: white url("images/bg-stripe.png") repeat;
@@ -378,72 +383,38 @@ img {
   margin-left: 15px;
 }
 
-.life_chart_c1 {
-  width: 33%;
+.life_chart_column {
+  width: 60%;
   margin: 0;
   float: left;
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 0;
+  padding: 0;
 }
 
-.life_chart_c1 ul {
+.life_chart_column li {
+  float: left;
+  padding: 0;
+  width: 50%;
   list-style-type: none;
-  padding: 0;
-  float: left;
 }
 
-.life_chart_c1 li {
-  font-size: 1rem;
-  float: left;
-  padding: 0;
-}
-
-.life_chart_c1 li span {
+.life_chart_column li span {
   font-size: 1.75rem;
   float: left;
   padding: 0;
 }
 
-.life_chart_c1 p {
+.life_chart_column p {
   font-size: 1rem;
   padding: 10px;
   margin: 0;
   float: left;
-  width: 250px;
+  width: 500px;
 }
 
-.life_chart_c2 {
-  width: 35%;
-  margin: 0;
-  float: left;
-  padding-top: 79px;
-}
-
-.life_chart_c2 ul {
-  list-style-type: none;
-  padding: 0;
-  float: left;
-}
-
-.life_chart_c2 li {
-  font-size: 1rem;
-  float: left;
-  padding: 0;
-}
-
-.life_chart_c2 li span {
-  font-size: 1.75rem;
-  float: left;
-  padding: 0;
-}
-
-.life_chart_c2 p {
-  font-size: 1rem;
-  padding: 10px;
-  margin: 0;
-  float: left;
-  width: 285px;
+.percent {
+  color: black;
+  margin-left: 10px;
+  font-size: 3rem;
 }
 
 .footer {
@@ -456,7 +427,7 @@ img {
 
 .footer_map {
   width: 100%;
-  height: 300px;
+  height: 380px;
   margin: 0;
   background: url("images/footer-map.png") no-repeat right top;
 }
@@ -586,95 +557,6 @@ a.email:hover {
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
-  .wrapper {
-    background: white url("images/home-mainbg.jpg") no-repeat top right;
-    background-size: 75%;
-  }
-
-  .header {
-    width: 100%;
-  }
-
-  .heather_logo img {
-    width: 315px;
-  }
-
-  .triangle {
-    width: 275px;
-    float: right;
-    position: absolute;
-    display: block;
-    top: 230px;
-    right: 0;
-    opacity: 0.8;
-    transition: all 0.15s linear;
-  }
-
-  .triangle:hover {
-    top: 260px;
-    opacity: 1;
-  }
-
-  .short_bio {
-    width: 436px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 1.35rem;
-    padding: 0;
-    margin: 0 45px;
-  }
-
-  .short_bio p {
-    width: 436px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 1rem;
-    padding: 0;
-    line-height: 1.75rem;
-  }
-
-  .short_bio a {
-    color: #3aadb4;
-    text-decoration: none;
-  }
-
-  .short_bio a:hover {
-    text-decoration: underline;
-  }
-
-  .learnmore_button {
-    width: 250px;
-    margin-left: 30px;
-    margin-bottom: 85px;
-  }
-
-  #parallelogram {
-    background: url("images/bg-links.png") no-repeat right;
-    width: 205px;
-    height: 36px;
-    color: #fedc38;
-    font-size: 0.95rem;
-    padding-left: 10px;
-    padding-top: 8px;
-    transition: all 0.25s;
-  }
-
-  #parallelogram a {
-    color: #fedc38;
-    text-decoration: none;
-    transition: all 0.25s;
-  }
-
-  #parallelogram:hover {
-    width: 220px;
-  }
-
-  #parallelogram:hover a {
-    width: 205px;
-    padding-left: 15px;
-    color: #acc539;
-  }
-
   .life_chart {
     width: 100%;
     background: white url("images/bg-stripe.png") repeat;
@@ -683,813 +565,121 @@ a.email:hover {
   }
 
   .life_pie img {
-    width: 300px;
+    width: 275px;
     float: left;
     margin-top: -50px;
-    margin-left: 15px;
+    margin-left: 25px;
   }
 
-  .life_chart_c1 {
-    width: 35.5%;
+  .life_chart_column {
+    width: 55%;
     margin: 0;
     float: left;
-    padding-top: 30px;
-    padding-right: 0;
+    padding: 0;
   }
 
-  .life_chart_c1 ul {
+  .life_chart_column li {
+    float: left;
+    padding: 0;
+    width: 50%;
     list-style-type: none;
-    padding: 0;
-    float: left;
   }
 
-  .life_chart_c1 li {
-    font-size: 1rem;
-    float: left;
-    padding: 0;
-  }
-
-  .life_chart_c1 li span {
+  .life_chart_column li span {
     font-size: 1.5rem;
     float: left;
     padding: 0;
   }
 
-  .life_chart_c1 p {
+  .life_chart_column p {
     font-size: 0.85rem;
     padding: 10px;
     margin: 0;
     float: left;
-    width: 185px;
+    width: 300px;
   }
 
-  .life_chart_c2 {
-    width: 30%;
-    margin: 0;
-    float: left;
-    padding-top: 79px;
-  }
-
-  .life_chart_c2 ul {
-    list-style-type: none;
-    padding: 0;
-    float: left;
-  }
-
-  .life_chart_c2 li {
-    font-size: 1rem;
-    float: left;
-    padding: 0;
-  }
-
-  .life_chart_c2 li span {
-    font-size: 1.5rem;
-    float: left;
-    padding: 0;
-  }
-
-  .life_chart_c2 p {
-    font-size: 0.85rem;
-    padding: 10px;
-    margin: 0;
-    float: left;
-    width: 195px;
-  }
-
-  .footer {
-    width: 100%;
-    margin: 0;
-    background: #cccccc url("images/bg-footer.png") repeat center;
-    clear: both;
-    position: relative;
-  }
-
-  .footer_map {
-    width: 100%;
-    height: 300px;
-    margin: 0;
-    background: url("images/footer-map.png") no-repeat right top;
-  }
-
-  .footer_content {
-    width: 100%;
-    margin: 0;
-    padding-top: 20px;
-    padding-left: 45px;
-  }
-
-  .footer_twitter {
-    width: 40%;
-    margin: 0;
-    float: left;
-  }
-
-  .footer_twitter a {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 1rem;
-    color: white;
-    margin: 0px;
-    display: block;
-    padding: 3px;
-    text-decoration: none;
-  }
-
-  a.twitter {
-    background: url("images/icon-footer-twitter-40x45.png") no-repeat 0 0;
-    width: 40px;
-    height: 45px;
-    display: block;
-    text-indent: -9999px;
-    float: left;
-    margin-right: 20px;
-  }
-
-  a.twitter:hover {
-    background-position: 0 -45px;
-  }
-
-  .footer_email {
-    width: 40%;
-    margin-top: 15px;
-    float: left;
-    clear: both;
-  }
-
-  .footer_email a {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 1rem;
-    color: white;
-    margin: 0;
-    display: block;
-    padding: 3px;
-    text-decoration: none;
-  }
-
-  a.email {
-    background: url("images/icon-footer-email-40x45.png") no-repeat 0 0;
-    width: 40px;
-    height: 45px;
-    display: block;
-    text-indent: -9999px;
-    float: left;
-    clear: both;
-    margin-right: 20px;
-  }
-
-  a.email:hover {
-    background-position: 0 -45px;
-  }
-
-  .credit {
-    width: 30%;
-    margin: 0;
-    padding-top: 20px;
-    clear: both;
-  }
-
-  .credit p {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 0.75rem;
-    color: white;
-    margin: 0;
-    padding-top: 3px;
-    letter-spacing: 0.25px;
-  }
-
-  .bubble {
-    width: 400px;
-    height: 105px;
-    background: url("images/footer-ribbon-full.png") no-repeat center;
-    padding: 10px;
-    margin: 0;
-    color: white;
-    position: absolute;
-    top: -30px;
-    right: 20px;
-  }
-
-  .bubble img {
-    border-radius: 50%;
-    float: left;
+  .percent {
+    color: black;
     margin-left: 10px;
-    margin-top: 2.5px;
-  }
-
-  .bubble p {
-    width: 250px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 0.80rem;
-    float: left;
-    line-height: 20px;
-    margin-top: 5px;
-    margin-left: 20px;
-  }
-
-  .bubble a {
-    color: #fedc38;
-    text-decoration: none;
+    font-size: 1.3rem;
   }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   .wrapper {
-    background: white url("images/home-mainbg.jpg") no-repeat top right;
-    background-size: 80%;
-  }
-
-  .header {
-    width: 100%;
-  }
-
-  .heather_logo img {
-    width: 315px;
-  }
-
-  .nav ul {
-    width: 25%;
-    display: block;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 44px;
-    list-style-type: none;
-    padding: 0;
-    margin-left: -30px;
-    transition: all 3s;
-  }
-
-  .nav li a {
-    padding-left: 30px;
-    text-decoration: none;
-    color: black;
-    margin-left: 40px;
-  }
-
-  .nav li:hover a {
-    background: url("images/icon-nav-active.png") no-repeat left;
+    background-size: 75%;
   }
 
   .triangle {
-    width: 250px;
-    float: right;
-    position: absolute;
-    display: block;
-    top: 180px;
-    right: 0;
-    opacity: 0.8;
-    transition: all 0.15s linear;
-  }
-
-  .triangle:hover {
-    top: 210px;
-    opacity: 1;
-  }
-
-  .short_bio {
-    width: 436px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 1.35rem;
-    padding: 0;
-    margin: 0 30px;
-  }
-
-  .short_bio p {
-    width: 436px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 1rem;
-    padding: 0;
-    line-height: 1.75rem;
-  }
-
-  .short_bio a {
-    color: #3aadb4;
-    text-decoration: none;
-  }
-
-  .short_bio a:hover {
-    text-decoration: underline;
-  }
-
-  .heading {
-    font-size: 1.25rem;
-    padding-bottom: 20px;
-  }
-
-  .life_chart {
-    width: 100%;
-    background: white url("images/bg-stripe.png") repeat;
-    margin: 0 auto;
-    padding-bottom: 50px;
+    width: 245px;
+    top: 205px;
   }
 
   .life_pie img {
-    width: 230px;
-    float: left;
-    margin-top: -40px;
-    margin-left: 20px;
+    width: 325px;
+    margin-left: 40px;
   }
 
-  .life_chart_c1 {
-    width: 32%;
-    margin: 0;
-    float: left;
-    padding: 30px;
-    padding-right: 0;
+  .life_chart_column {
+    width: 45%;
   }
 
-  .life_chart_c1 ul {
-    list-style-type: none;
-    padding: 0;
+  .life_chart_column li {
+    width: 65%;
   }
 
-  .life_chart_c1 li {
-    font-size: 1rem;
-    padding: 0;
-  }
-
-  .life_chart_c1 li span {
-    font-size: 2rem;
-    padding: 0;
-  }
-
-  .life_chart_c1 p {
-    font-size: 1rem;
-    padding: 2px;
-    margin: 0;
-    width: 185px;
-  }
-
-  .life_chart_c2 {
-    width: 34%;
-    margin: 0;
-    float: left;
-    padding-top: 74px;
-  }
-
-  .life_chart_c2 ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .life_chart_c2 li {
-    font-size: 1rem;
-    padding: 0;
-  }
-
-  .life_chart_c2 li span {
-    font-size: 2rem;
-    padding: 0;
-  }
-
-  .life_chart_c2 p {
-    font-size: 1rem;
-    padding: 2px;
-    margin: 0;
-    width: 195px;
-  }
-
-  .footer {
-    width: 100%;
-    margin: 0;
-    background: #cccccc url("images/bg-footer.png") repeat center;
-    clear: both;
-    position: relative;
-  }
-
-  .footer_map {
-    width: 100%;
-    height: 300px;
-    margin: 0;
-    background: url("images/footer-map.png") no-repeat right top;
+  .life_chart_column p {
+    width: 300px;
+    font-size: 0.85rem;
   }
 
   .footer_content {
     width: 100%;
     margin: 0;
-    padding-top: 20px;
-    padding-left: 30px;
+    padding-top: 100px;
+    padding-left: 45px;
+  }
+}
+@media (max-width: 663px) {
+  .life_pie img {
+    width: 325px;
+    margin-right: 100px;
+    float: right;
   }
 
-  .footer_twitter {
-    width: 40%;
-    margin: 0;
-    float: left;
+  .life_chart_column {
+    width: 80%;
   }
 
-  .footer_twitter a {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
+  .life_chart_column p {
+    width: 500px;
     font-size: 1rem;
-    color: white;
-    margin: 0px;
-    display: block;
-    padding: 3px;
-    text-decoration: none;
-  }
-
-  a.twitter {
-    background: url("images/icon-footer-twitter-40x45.png") no-repeat 0 0;
-    width: 40px;
-    height: 45px;
-    display: block;
-    text-indent: -9999px;
-    float: left;
-    margin-right: 20px;
-  }
-
-  a.twitter:hover {
-    background-position: 0 -45px;
-  }
-
-  .footer_email {
-    width: 40%;
-    margin-top: 15px;
-    float: left;
-    clear: both;
-  }
-
-  .footer_email a {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 1rem;
-    color: white;
-    margin: 0;
-    display: block;
-    padding: 3px;
-    text-decoration: none;
-  }
-
-  a.email {
-    background: url("images/icon-footer-email-40x45.png") no-repeat 0 0;
-    width: 40px;
-    height: 45px;
-    display: block;
-    text-indent: -9999px;
-    float: left;
-    clear: both;
-    margin-right: 20px;
-  }
-
-  a.email:hover {
-    background-position: 0 -45px;
-  }
-
-  .credit {
-    width: 30%;
-    margin: 0;
-    padding-top: 20px;
-    clear: both;
-  }
-
-  .credit p {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 0.75rem;
-    color: white;
-    margin: 0;
-    padding-top: 3px;
-    letter-spacing: 0.25px;
-  }
-
-  .bubble {
-    width: 400px;
-    height: 105px;
-    background: url("images/footer-ribbon-full.png") no-repeat center;
-    padding: 10px;
-    margin: 0;
-    color: white;
-    position: absolute;
-    top: -30px;
-    right: 20px;
-  }
-
-  .bubble img {
-    border-radius: 50%;
-    float: left;
-    margin-left: 10px;
-    margin-top: 2.5px;
-  }
-
-  .bubble p {
-    width: 250px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 0.80rem;
-    float: left;
-    line-height: 20px;
-    margin-top: 5px;
-    margin-left: 20px;
-  }
-
-  .bubble a {
-    color: #fedc38;
-    text-decoration: none;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .wrapper {
-    background: white url("images/home-mainbg.jpg") no-repeat top right;
-    background-size: 90%;
-  }
-
-  .header {
-    width: 100%;
-  }
-
-  .heather_logo img {
-    width: 250px;
-    margin-top: 160px;
-  }
-
-  .nav ul {
-    width: 25%;
-    display: block;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 44px;
-    list-style-type: none;
-    padding: 0;
-    margin-left: -30px;
-    transition: all 3s;
-  }
-
-  .nav li a {
-    padding-left: 30px;
-    text-decoration: none;
-    color: black;
-    margin-left: 40px;
-  }
-
-  .nav li:hover a {
-    background: url("images/icon-nav-active.png") no-repeat left;
-  }
-
-  .triangle {
-    width: 190px;
-    float: right;
-    position: absolute;
-    display: block;
-    top: 130px;
-    right: 0;
-    opacity: 0.8;
-    transition: all 0.15s linear;
-  }
-
-  .triangle:hover {
-    top: 150px;
-    opacity: 1;
-  }
-
-  .short_bio {
-    width: 400px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 1.35rem;
-    padding: 0;
-    margin: 0 30px;
-  }
-
-  .short_bio p {
-    width: 400px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 1rem;
-    padding: 0;
-    line-height: 1.75rem;
-  }
-
-  .short_bio a {
-    color: #3aadb4;
-    text-decoration: none;
-  }
-
-  .short_bio a:hover {
-    text-decoration: underline;
-  }
-
-  .heading {
-    font-size: 2rem;
-    padding-bottom: 20px;
-  }
-
-  .life_chart {
-    width: 100%;
-    background: white url("images/bg-stripe.png") repeat;
-    margin: 0 auto;
-  }
-
   .life_pie img {
-    width: 80%;
-    margin-top: -40px;
-    margin-left: 45px;
-  }
-
-  .life_chart_c1 {
-    width: 100%;
-    margin: 0;
-    padding-left: 30px;
-    padding-bottom: 0;
-  }
-
-  .life_chart_c1 ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .life_chart_c1 li {
-    font-size: 1rem;
-    padding: 0;
-    width: 100%;
-  }
-
-  .life_chart_c1 li span {
-    font-size: 2.5rem;
-    padding: 0;
-  }
-
-  .life_chart_c1 p {
-    font-size: 1.35rem;
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    margin: 0;
-    width: 60%;
-  }
-
-  .life_chart_c2 {
-    width: 100%;
-    margin-top: -30px;
-    padding-left: 30px;
-    padding-top: 0;
-  }
-
-  .life_chart_c2 ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .life_chart_c2 li {
-    font-size: 1rem;
-    padding: 0;
-    width: 100%;
-  }
-
-  .life_chart_c2 li span {
-    font-size: 2.5rem;
-    padding: 0;
-  }
-
-  .life_chart_c2 p {
-    font-size: 1.35rem;
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    margin: 0;
-    width: 60%;
-  }
-
-  .footer {
-    width: 100%;
-    margin: 0;
-    background: #cccccc url("images/bg-footer.png") repeat center;
-    clear: both;
-    position: relative;
-  }
-
-  .footer_map {
-    width: 100%;
-    height: 330px;
-    margin: 0;
-    background: url("images/footer-map.png") no-repeat -568px top;
-  }
-
-  .footer_content {
-    width: 100%;
-    margin: 0;
-    padding-top: 20px;
-    padding-left: 30px;
+    margin-right: 80px;
   }
 
   .footer_twitter {
-    width: 70%;
-    margin-top: 90px;
-    float: left;
-  }
-
-  .footer_twitter a {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 1rem;
-    color: white;
-    margin: 0px;
-    display: block;
-    padding: 3px;
-    text-decoration: none;
-  }
-
-  a.twitter {
-    background: url("images/icon-footer-twitter-40x45.png") no-repeat 0 0;
-    width: 40px;
-    height: 45px;
-    display: block;
-    text-indent: -9999px;
-    float: left;
-    margin-right: 20px;
-  }
-
-  a.twitter:hover {
-    background-position: 0 -45px;
+    width: 100%;
   }
 
   .footer_email {
-    width: 70%;
-    margin-top: 15px;
-    float: left;
-    clear: both;
-  }
-
-  .footer_email a {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 1rem;
-    color: white;
-    margin: 0;
-    display: block;
-    padding: 3px;
-    text-decoration: none;
-  }
-
-  a.email {
-    background: url("images/icon-footer-email-40x45.png") no-repeat 0 0;
-    width: 40px;
-    height: 45px;
-    display: block;
-    text-indent: -9999px;
-    float: left;
-    clear: both;
-    margin-right: 20px;
-  }
-
-  a.email:hover {
-    background-position: 0 -45px;
+    width: 100%;
   }
 
   .credit {
-    width: 30%;
-    margin: 0;
-    padding-top: 20px;
-    clear: both;
+    width: 50%;
   }
 
-  .credit p {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 0.75rem;
-    color: white;
-    margin: 0;
-    padding-top: 3px;
-    letter-spacing: 0.25px;
+  .triangle {
+    display: none;
   }
 
-  .bubble {
-    width: 400px;
-    height: 105px;
-    background: url("images/footer-ribbon-full.png") no-repeat center;
-    background-size: 85%;
-    padding: 10px;
-    margin: 0;
-    color: white;
-    position: absolute;
-    top: -30px;
-    right: 10px;
-  }
-
-  .bubble img {
-    border-radius: 50%;
-    float: left;
-    margin-left: 32px;
-    margin-top: 3px;
-  }
-
-  .bubble p {
-    width: 250px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 0.75rem;
-    float: left;
-    line-height: 18px;
-    margin-top: 9px;
-    margin-left: 10px;
-  }
-
-  .bubble a {
-    color: #fedc38;
-    text-decoration: none;
+  .heather_logo img {
+    width: 270px;
   }
 }
