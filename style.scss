@@ -105,7 +105,7 @@ img {
 		background: url("images/icon-nav-active.png") no-repeat left;
 	}
 .triangle {
-	width: 375px;
+	max-width: 375px;
 	float: right;
 	position: absolute;
 	display: block;
@@ -119,18 +119,22 @@ img {
 	opacity: 1;
 }	
 .short_bio {
-	width: 436px;
+	max-width: 400px;
 	@include fontFamily;
 	font-size: 1.35rem;
 	padding: 0;
 	margin: 0 45px;
 }
 	.short_bio p {
-		width: 436px;
+		max-width: 400px;
 		@include fontFamily;
 		font-size: 1rem;
 		padding: 0;
 		line-height: 1.75rem;
+	}
+	.intro {
+		max-width: 400px;
+		font-size: 1.25rem;
 	}
 	.short_bio a {
 		color: $darkblue;
@@ -215,10 +219,10 @@ img {
 		}
 		.life_chart_column p {
 			font-size: 1rem;
-			padding: 10px;
+			padding: 0 10px 30px 10px;
 			margin: 0;
 			float: left;
-			width: 500px;
+			max-width: 250px;
 		}
 		.percent {
 			color: black;
@@ -382,11 +386,7 @@ img {
 				padding: 0;
 			}
 			.life_chart_column p {
-				font-size: 0.85rem;
-				padding: 10px;
-				margin: 0;
-				float: left;
-				width: 300px;
+				padding: 0 10px 15px 10px;
 			}
 			.percent {
 				color: black;
@@ -401,22 +401,32 @@ img {
 		background-size: 75%;
 	}
 	.triangle {
-		width: 245px;
-		top: 205px;
+		max-width: 40%;
+		float: right;
+		position: absolute;
+		display: block;
+		top: 235px;
+		right: 0;
+		opacity: 0.8;
+		transition: all 0.15s linear;
 	}
+	.triangle:hover {
+		top: 300px;
+		opacity: 1;
+	}	
 	.life_pie img {
-		width: 325px;
+		width: 300px;
 		margin-left: 40px;
 	}
 	.life_chart_column {
-		width: 45%;
+		width: 54%;
 	}
 		.life_chart_column li {
-			width: 65%;		
+			width: 100%;
+			padding: 5px;		
 		}
 		.life_chart_column p {
-			width: 300px;
-			font-size: 0.85rem;
+			font-size: 0.95rem;
 		}
 		.footer_content {
 		width: 100%;
@@ -426,27 +436,26 @@ img {
 		}
 }
 
-@media (max-width: 663px) {
-		.life_pie img {
-			width: 325px;
-			margin-right: 100px;
-			float: right;
-		}
-		.life_chart_column {
-			width: 80%;
-		}
-			.life_chart_column p {
-				width: 500px;
-				font-size: 1rem;
-			}
-}
- 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-	
-	.life_pie img {
-		margin-right: 80px;
+	.short_bio p {
+		width: 80%;
+		font-size: 1rem;
 	}
+	.life_pie img {
+		width: 220px;
+	}
+	.life_chart_column {
+		width: 100%;
+		margin-left: -20px;
+	}
+		.life_chart_column li {
+			width: 100%;
+			padding: 5px;		
+		}
+		.life_chart_column p {
+			font-size: 0.95rem;
+		}
 	.footer_twitter {
 		width: 100%;
 	}
@@ -462,7 +471,42 @@ img {
 	.heather_logo img {
 		width: 270px;
 	}
-
+	.bubble {
+		max-width: 310px;
+		height: 95px;
+		background: url("images/footer-ribbon-full.png") no-repeat center;
+		padding: 5px;
+		margin: 0;
+		color: white;
+		position: absolute;
+		top: -30px;
+		left: 10px;
+	}
+		.bubble img {
+			border-radius: 50%;
+			float: left;
+			margin-left: 5px;
+			margin-top: 2.5px;
+		}
+		.bubble p {
+			width: 210px;
+			@include fontFamily;
+			font-size: 0.70rem;
+			float: left;
+			line-height: 20px;
+			margin-top: 5px;
+			margin-left: 10px;
+		}
+		.bubble a {
+			color: $darkyellow;
+			text-decoration: none;
+		}
+		.footer_content {
+		width: 100%;
+		margin: 0;
+		padding-top: 80px;
+		padding-left: 25px;
+		}
 }
 
 
